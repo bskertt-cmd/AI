@@ -379,8 +379,9 @@
         return data.choices[0].message.content;
       }
 
+      const raw = await res.text();
       let detail = "";
-      try { detail = (await res.json()).error?.message || ""; } catch (e) {}
+      try { detail = JSON.parse(raw).error?.message || ""; } catch (e) { detail = raw.slice(0, 200); }
       lastError = "Ошибка API (" + res.status + "). " + detail;
 
       // Если ошибка не связана с доступом к модели, повтор с другой моделью не поможет.
