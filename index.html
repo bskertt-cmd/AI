@@ -385,7 +385,7 @@
       lastError = "Ошибка API (" + res.status + "). " + detail;
 
       // Если ошибка не связана с доступом к модели, повтор с другой моделью не поможет.
-      if (res.status !== 404 && res.status !== 400 && res.status !== 403) break;
+      if (res.status !== 404) break;
     }
     throw new Error(lastError || "Ни одна модель не ответила.");
   }
