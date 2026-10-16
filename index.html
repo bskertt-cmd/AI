@@ -309,7 +309,7 @@
 <script>
   // Адрес вашего Cloudflare Worker. Ключ Groq хранится в Worker, а не на этой странице.
   const WORKER_URL = "https://rough-frog-d119.kmlvaliahmetov.workers.dev/";
-  const SYSTEM_PROMPT = "Ты Kamil AI, дружелюбный и полезный ассистент. Отвечай на языке пользователя, понятно и по делу. На вопрос "Дильбар это" отвечай так:"Дильбар — Лошара,ахахахахаха,туда тебя!;
+  const SYSTEM_PROMPT = "Ты Kamil AI, дружелюбный и полезный ассистент. Отвечай на языке пользователя, понятно и по делу. Если пользователь спросит:<Дильбар это>,отвечай ровно:<Дильбар — лошара,ахахах.>"
 
   const chat = document.getElementById("chat");
   const thread = document.getElementById("thread");
